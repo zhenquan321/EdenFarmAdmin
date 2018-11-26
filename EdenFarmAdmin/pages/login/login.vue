@@ -11,7 +11,7 @@
             </view>
         </view>
         <view class="btn-row">
-            <button type="primary" class="primary" @tap="bindLogin">登录</button>
+            <button type="primary" class="primary loginBtn" @tap="bindLogin">登录</button>
         </view>
         <view class="action-row">
           <!--  <navigator url="../reg/reg">注册账号</navigator> -->
@@ -98,17 +98,21 @@
                     account: this.account,
                     password: this.password
                 };
-                const validUser = service.getUsers().some(function (user) {
-                    return data.account === user.account && data.password === user.password;
-                });
-                if (validUser) {
-                    this.toMain(this.account);
-                } else {
-                    uni.showToast({
-                        icon: 'none',
-                        title: '用户账号或密码不正确',
-                    });
-                }
+				let parmas={
+					data:data,// 查询条件；
+					setTime:"",//缓存时间 day，week，month ；
+					host:"",//接口地址；
+					method:"post",//请求方式
+					apiUrl:"/wxapp/verify",//接口地址
+				}
+				this.request(parmas)
+				.then(re=>{
+					this.conLog(re.data);
+					this.login(re.data);
+				})
+				.catch(re=>{
+					this.conLog("oauthAerify_catch",re)
+				})
             },
             oauth(value) {
                 uni.login({
@@ -153,40 +157,16 @@
     }
 </script>
 
-<style>
-    .action-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-    }
+<style lang="less" scoped>
+.loginBtn{
+	background-color: #60A411;
+}
+.input-row ._input{
+	padding:30rpx 0;
+}
+.input-row .title {
+	padding:30rpx 0;
+	padding-left:30rpx;
 
-    .action-row navigator {
-        color: #007aff;
-        padding: 0 20px;
-    }
-
-    .oauth-row {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-    }
-
-    .oauth-image {
-        width: 100px;
-        height: 100px;
-        border: 1px solid #dddddd;
-        border-radius: 100px;
-        margin: 0 40px;
-        background-color: #ffffff;
-    }
-
-    .oauth-image image {
-        width: 60px;
-        height: 60px;
-        margin: 20px;
-    }
+}
 </style>

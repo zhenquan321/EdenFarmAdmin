@@ -3,7 +3,7 @@
         {
             "path": "pages/main/main",
             "style": {
-                "navigationBarTitleText": "登录模板"
+               "navigationBarTitleText" : "管理后台"
             }
         }, {
             "path": "pages/login/login",
@@ -29,23 +29,23 @@
     ],
     "tabBar": {
         "color": "#7a7e83",
-        "selectedColor": "#0faeff",
+        "selectedColor": "#60a411",
         "backgroundColor": "#ffffff",
         "list": [{
             "pagePath": "pages/main/main",
             "text": "首页",
-            "iconPath": "static/img/home.png",
-            "selectedIconPath": "static/img/homeHL.png"
+            "iconPath": "static/tarBarImg/home.png",
+            "selectedIconPath": "static/tarBarImg/sel_home.png"
         }, {
             "pagePath": "pages/user/user",
             "text": "我的",
-            "iconPath": "static/img/user.png",
-            "selectedIconPath": "static/img/userHL.png"
+            "iconPath": "static/tarBarImg/user.png",
+            "selectedIconPath": "static/tarBarImg/sel_user.png"
         }]
     },
     "globalStyle": {
         "navigationBarTextStyle": "white",
-        "navigationBarBackgroundColor": "#0faeff",
+        "navigationBarBackgroundColor": "#60a411",
         "backgroundColor": "#fbf9fe"
     }
 }

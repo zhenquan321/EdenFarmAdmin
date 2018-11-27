@@ -1,0 +1,46 @@
+{
+  "_from": "mpvue-ripple@^0.1.0",
+  "_id": "mpvue-ripple@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-+MTsFbHiUqf/cfTaZV1LQQ51142erYICiPxVoTEpEu8OEaVpnzDYtGoWIv085gd5ojHvxHLiFlaZ/zyALC08kg==",
+  "_location": "/mpvue-ripple",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "mpvue-ripple@^0.1.0",
+    "name": "mpvue-ripple",
+    "escapedName": "mpvue-ripple",
+    "rawSpec": "^0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/mpvue-ripple/-/mpvue-ripple-0.1.0.tgz",
+  "_shasum": "b7aa1753b6c32c88bd5e0074e8b90ea42fb3026a",
+  "_spec": "mpvue-ripple@^0.1.0",
+  "_where": "G:\\workCode\\ksp\\ksp.uniAppDocument",
+  "author": {
+    "name": "linrui",
+    "email": "linrui1994@foxmail.com"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "mpvue": "^1.0.1"
+  },
+  "deprecated": false,
+  "description": "mpvue-ripple is a ripple component for mpvue.",
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "files": [
+    "src"
+  ],
+  "main": "src/Ripple.vue",
+  "module": "src/Ripple.vue",
+  "name": "mpvue-ripple",
+  "version": "0.1.0"
+}

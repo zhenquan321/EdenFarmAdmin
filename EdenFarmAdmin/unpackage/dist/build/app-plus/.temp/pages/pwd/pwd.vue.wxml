@@ -1,13 +1,13 @@
-<template name="c43e8978">
-  <view class="_view data-v-d62a7356 content">
-    <view class="_view data-v-d62a7356 input-group">
-      <view class="_view data-v-d62a7356 input-row">
-        <text class="_text data-v-d62a7356 title">邮箱：</text>
-        <input type="text" value="{{email}}" bindinput="handleProxy" placeholder="请输入邮箱" data-eventid="{{'ftK-0'}}" data-comkey="{{$k}}" class="_input data-v-d62a7356" />
+<template name="2384d486">
+  <view class="_view data-v-11b0939f content">
+    <view class="_view data-v-11b0939f input-group">
+      <view class="_view data-v-11b0939f input-row">
+        <text class="_text data-v-11b0939f title">邮箱：</text>
+        <input type="text" value="{{email}}" bindinput="handleProxy" placeholder="请输入邮箱" data-eventid="{{'J3q-0'}}" data-comkey="{{$k}}" class="_input data-v-11b0939f" />
       </view>
     </view>
-    <view class="_view data-v-d62a7356 btn-row">
-      <button type="primary" class="_button data-v-d62a7356 primary" bindtap="handleProxy" data-eventid="{{'ajD-1'}}" data-comkey="{{$k}}">提交</button>
+    <view class="_view data-v-11b0939f btn-row">
+      <button type="primary" class="_button data-v-11b0939f primary" bindtap="handleProxy" data-eventid="{{'MJZ-1'}}" data-comkey="{{$k}}">提交</button>
     </view>
   </view>
 </template>

@@ -1,8 +1,49 @@
-<template name="8f3c11b0">
-  <view class="_view data-v-151581f9 content">
-    <view class="_view data-v-151581f9 btn-row">
-      <button wx:if="{{!hasLogin}}" type="primary" class="_button data-v-151581f9 primary" bindtap="handleProxy" data-eventid="{{'hSj-0'}}" data-comkey="{{$k}}">登录</button>
-      <button wx:if="{{hasLogin}}" type="default" bindtap="handleProxy" data-eventid="{{'Ek4-1'}}" data-comkey="{{$k}}" class="_button data-v-151581f9">退出登录</button>
+<template name="f7de8fca">
+  <view class="_view data-v-779d24c3 content">
+    <view class="_view data-v-779d24c3 my_head">
+      <view class="_view data-v-779d24c3 my_head_pic">
+        <image id="uinLogo" class="_image data-v-779d24c3 my_head_img img" src></image>
+      </view>
+      <view class="_view data-v-779d24c3 my_head_info">
+        <view class="_view data-v-779d24c3 my_head_name" id="nickname"></view>
+      </view>
+    </view>
+    <view class="_view data-v-779d24c3 fui-cell-group fui-cell-click">
+      <view class="_view data-v-779d24c3 fui-cell-text">我的订单</view>
+      <view class="_view data-v-779d24c3 fui-cell-remark">查看全部订单</view>
+      <view class="_view data-v-779d24c3 fui-icon-group nomargin">
+        <view class="_view data-v-779d24c3 icon">
+          <image src="/static/user/daifukuan" class="_image data-v-779d24c3"></image>
+        </view>
+        <view class="_view data-v-779d24c3 text">待付款</view>
+        <view class="_view data-v-779d24c3 icon">
+          <image src="/static/user/daishouhuo" class="_image data-v-779d24c3"></image>
+        </view>
+        <view class="_view data-v-779d24c3 text">待发货</view>
+        <view class="_view data-v-779d24c3 icon">
+          <image src="/static/user/daipingjia" class="_image data-v-779d24c3"></image>
+        </view>
+        <view class="_view data-v-779d24c3 text">待收货</view>
+        <view class="_view data-v-779d24c3 icon">
+          <image src="/static/user/yiwancheng" class="_image data-v-779d24c3"></image>
+        </view>
+        <view class="_view data-v-779d24c3 text">已完成</view>
+      </view>
+    </view>
+    <view class="_view data-v-779d24c3 goods-info">
+      <view class="_view data-v-779d24c3 row-box">
+        <view class="_view data-v-779d24c3 row-label">会员中心</view>
+        <view class="_view data-v-779d24c3 right-text" style="color:#666">伊甸余额：¥ </view>
+      </view>
+      <view class="_view data-v-779d24c3 row-box">
+        <view class="_view data-v-779d24c3 row-label">地址管理</view>
+        <view class="_view data-v-779d24c3 right-text"></view>
+      </view>
+    </view>
+    <view class="_view data-v-779d24c3 goods-info">
+      <view class="_view data-v-779d24c3 row-box">
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="_button data-v-779d24c3">授权手机号</button>
+      </view>
     </view>
   </view>
 </template>

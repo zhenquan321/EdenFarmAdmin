@@ -71,10 +71,6 @@
                 this.positionTop = uni.getSystemInfoSync().windowHeight - 100;
             },
             bindLogin() {
-                /**
-                 * 客户端对账号信息进行一些必要的校验。
-                 * 实际开发中，根据业务需要进行处理，这里仅做示例。
-                 */
                 if (this.account.length < 5) {
                     uni.showToast({
                         icon: 'none',
@@ -89,30 +85,25 @@
                     });
                     return;
                 }
-                /**
-                 * 下面简单模拟下服务端的处理
-                 * 检测用户账号密码是否在已注册的用户列表中
-                 * 实际开发中，使用 uni.request 将账号信息发送至服务端，客户端在回调函数中获取结果信息。
-                 */
                 const data = {
                     account: this.account,
                     password: this.password
                 };
-				let parmas={
-					data:data,// 查询条件；
-					setTime:"",//缓存时间 day，week，month ；
-					host:"",//接口地址；
-					method:"post",//请求方式
-					apiUrl:"/wxapp/verify",//接口地址
-				}
-				this.request(parmas)
-				.then(re=>{
-					this.conLog(re.data);
-					this.login(re.data);
-				})
-				.catch(re=>{
-					this.conLog("oauthAerify_catch",re)
-				})
+								let parmas={
+									data:data,// 查询条件；
+									setTime:"",//缓存时间 day，week，month ；
+									host:"",//接口地址；
+									method:"post",//请求方式
+									apiUrl:"api/admin/login",//接口地址
+								}
+								this.request(parmas)
+								.then(re=>{
+									this.conLog(re.data);
+									this.login(re.data);
+								})
+								.catch(re=>{
+									this.conLog("oauthAerify_catch",re)
+								})
             },
             oauth(value) {
                 uni.login({

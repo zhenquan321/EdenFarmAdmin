@@ -10,9 +10,8 @@
  *}
  * By FZQ
  */
-
 import {BASE_URL,methodList,environmentData} from '../config/apiCfg';
-import {hashStorage} from '../common/utils/hashStorage';
+import {hashStorage} from './../common/utils/hashStorage';
 const apiHashStorage = new hashStorage();
 console.log("apiHashStorage",typeof(apiHashStorage.getStorage));
 function request(data) {

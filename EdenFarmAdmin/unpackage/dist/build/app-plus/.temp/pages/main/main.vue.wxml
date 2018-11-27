@@ -1,18 +1,69 @@
-<template name="4b9a9be8">
-  <view class="_view data-v-af63b28e content">
-    <view wx:if="{{hasLogin}}" class="_view data-v-af63b28e hello">
-      <view class="_view data-v-af63b28e title"> 您好 {{userName}}，您已成功登录。 </view>
-      <view class="_view data-v-af63b28e ul">
-        <view class="_view data-v-af63b28e">这是 uni-app 带登录模板的示例App首页。</view>
-        <view class="_view data-v-af63b28e">在 “我的” 中点击 “退出” 可以 “注销当前账户”</view>
+<template name="17495cdb">
+  <view class="_view data-v-0ad5c983 content">
+    <view class="_view data-v-0ad5c983 app">
+      <view class="_view data-v-0ad5c983 header">
+        <view class="_view data-v-0ad5c983 jinEnCard">
+          <view class="_view data-v-0ad5c983 JETitle">今天付款金额(元)</view>
+          <view class="_view data-v-0ad5c983 JENum">34411.2</view>
+        </view>
+        <view class="_view data-v-0ad5c983 XMList">
+          <view class="_view data-v-0ad5c983 xmCard">
+            <view class="_view data-v-0ad5c983">待确认订单</view>
+            <view class="_view data-v-0ad5c983">34</view>
+          </view>
+          <view class="_view data-v-0ad5c983 xmCard">
+            <view class="_view data-v-0ad5c983">待发货订单</view>
+            <view class="_view data-v-0ad5c983">34</view>
+          </view>
+          <view class="_view data-v-0ad5c983 xmCard">
+            <view class="_view data-v-0ad5c983">付款件数</view>
+            <view class="_view data-v-0ad5c983">34</view>
+          </view>
+        </view>
       </view>
-    </view>
-    <view wx:if="{{!hasLogin}}" class="_view data-v-af63b28e hello">
-      <view class="_view data-v-af63b28e title"> 您好 游客。 </view>
-      <view class="_view data-v-af63b28e ul">
-        <view class="_view data-v-af63b28e">这是 uni-app 带登录模板的示例App首页。</view>
-        <view class="_view data-v-af63b28e">在 “我的” 中点击 “登录” 可以 “登录您的账户”</view>
+      <view class="_view data-v-0ad5c983 action">
+        <view class="_view data-v-0ad5c983 col">
+          <navigator url="/pages/shop/order/index" class="_navigator data-v-0ad5c983">
+            <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/dingdanGl.png"></image>
+            <text class="_text data-v-0ad5c983 textMs">订单管理</text>
+          </navigator>
+        </view>
+        <view class="_view data-v-0ad5c983 col">
+          <navigator url="/pages/hotel/store/fang/room" class="_navigator data-v-0ad5c983">
+            <view class="_view data-v-0ad5c983 imgCardIcon">
+              <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/fangjianGl3.png"></image>
+            </view>
+            <text class="_text data-v-0ad5c983 textMs">房间管理</text>
+          </navigator>
+        </view>
+        <view class="_view data-v-0ad5c983 col">
+          <navigator url="/pages/hotel/store/fang/price" class="_navigator data-v-0ad5c983">
+            <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/fangjiaGl2.png"></image>
+            <text class="_text data-v-0ad5c983 textMs">房价管理</text>
+          </navigator>
+        </view>
+        <view class="_view data-v-0ad5c983 col">
+          <navigator url="/pages/hotel/store/info/index" class="_navigator data-v-0ad5c983">
+            <view class="_view data-v-0ad5c983 imgCardIcon2">
+              <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/ziliaoGl.png"></image>
+            </view>
+            <text class="_text data-v-0ad5c983 textMs">资料管理</text>
+          </navigator>
+        </view>
+        <view class="_view data-v-0ad5c983 col">
+          <navigator url="/pages/hotel/store/comment/index" class="_navigator data-v-0ad5c983">
+            <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/pingjiaGl.png"></image>
+            <text class="_text data-v-0ad5c983 textMs">评价管理</text>
+          </navigator>
+        </view>
+        <view bindtap="tel" class="_view data-v-0ad5c983 col">
+          <view class="_view data-v-0ad5c983 imgCardIcon3">
+            <image class="_image data-v-0ad5c983 tubiao" src="/static/manage/lianxiKf.png"></image>
+          </view>
+          <text class="_text data-v-0ad5c983 textMs">联系客服</text>
+        </view>
       </view>
+      <view class="_view data-v-0ad5c983 kongbai"></view>
     </view>
   </view>
 </template>

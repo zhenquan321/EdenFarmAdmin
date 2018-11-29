@@ -1,5 +1,6 @@
 const BASE_URL = {
 	formal: "https://api.ydnc.com.cn/",
+	home: "https://home.ydnc.com.cn/",
 }
 const methodList = {
 	get: "GET",

@@ -86,60 +86,31 @@
                     return;
                 }
                 const data = {
-                    account: this.account,
-                    password: this.password
+                    username: this.account,
+                    password: this.password,
+										name:"",
                 };
 								let parmas={
 									data:data,// 查询条件；
 									setTime:"",//缓存时间 day，week，month ；
-									host:"",//接口地址；
-									method:"post",//请求方式
+									host:"home",//接口地址；
+									method:"get",//请求方式
 									apiUrl:"api/admin/login",//接口地址
 								}
 								this.request(parmas)
 								.then(re=>{
-									this.conLog(re.data);
-									this.login(re.data);
+									console.log(re);
+									this.login(re.data.con);
+									if(re.data&&re.data.con&&re.data.con.token){
+										uni.reLaunch({
+												url: '../main/main',
+										});
+									}
 								})
 								.catch(re=>{
 									this.conLog("oauthAerify_catch",re)
 								})
             },
-            oauth(value) {
-                uni.login({
-                    provider: value,
-                    success: (res) => {
-                        uni.getUserInfo({
-                            provider: value,
-                            success: (infoRes) => {
-                                /**
-                                 * 实际开发中，获取用户信息后，需要将信息上报至服务端。
-                                 * 服务端可以用 userInfo.openId 作为用户的唯一标识新增或绑定用户信息。
-                                 */
-                                this.toMain(infoRes.userInfo.nickName);
-                            }
-                        });
-                    },
-                    fail: (err) => {
-                        console.error('授权登录失败：' + JSON.stringify(err));
-                    }
-                });
-            },
-            toMain(userName) {
-                this.login(userName);
-                /**
-                 * 强制登录时使用reLaunch方式跳转过来
-				 * 返回首页也使用reLaunch方式
-                 */
-                if (this.forcedLogin) {
-                    uni.reLaunch({
-                        url: '../main/main',
-                    });
-                } else {
-                    uni.navigateBack();
-                }
-
-            }
         },
         onLoad() {
             this.initPosition();

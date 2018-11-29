@@ -79,6 +79,29 @@
 
 	export default {
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
+		methods: {
+				...mapMutations(['login']),
+				statistics() {
+					const data = {
+					};
+					let parmas={
+						data:data,// 查询条件；
+						setTime:"",//缓存时间 day，week，month ；
+						host:"",//接口地址；
+						method:"get",//请求方式
+						apiUrl:"/api/Order/statistics",//接口地址
+					}
+					this.request(parmas)
+					.then(re=>{
+						console.log(re.data);
+						
+					})
+					.catch(re=>{
+						this.conLog("oauthAerify_catch",re)
+					})
+				},
+		},
+		
 		onLoad() {
 			if (!this.hasLogin) {
 				uni.showModal({
